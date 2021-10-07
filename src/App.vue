@@ -1,21 +1,19 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+   <router-link to="/" class="aa">Home</router-link>
+     <router-link to="/About" class="aa">About</router-link>
+    <router-link to="/Service" class="aa">Service</router-link>
+      <router-view></router-view>
   </div>
 </template>
-
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Vue from 'vue'
+import Vuelidate from 'vuelidate'
+Vue.use(Vuelidate)
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
 }
 </script>
-
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -24,5 +22,8 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.aa {
+    margin-left: 25px;
 }
 </style>
